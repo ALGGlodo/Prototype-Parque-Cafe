@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@theme {
+  --radius: 0.5rem;
+
+  /* Brand palette — warm park/cafe */
+  --color-cream: oklch(0.965 0.018 85);
+  --color-forest: oklch(0.38 0.06 155);
+  --color-forest-deep: oklch(0.24 0.05 155);
+  --color-terracotta: oklch(0.62 0.14 42);
+  --color-ink: oklch(0.2 0.02 60);
+
+  /* Semantic theme tokens */
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-ink);
+  --color-card: oklch(0.99 0.008 85);
+  --color-card-foreground: var(--color-ink);
+  --color-popover: oklch(0.99 0.008 85);
+  --color-popover-foreground: var(--color-ink);
+  --color-primary: var(--color-forest);
+  --color-primary-foreground: var(--color-cream);
+  --color-secondary: oklch(0.92 0.02 85);
+  --color-secondary-foreground: var(--color-forest-deep);
+  --color-muted: oklch(0.93 0.015 85);
+  --color-muted-foreground: oklch(0.45 0.02 60);
+  --color-accent: var(--color-terracotta);
+  --color-accent-foreground: var(--color-cream);
+  --color-destructive: oklch(0.55 0.22 25);
+  --color-destructive-foreground: oklch(0.99 0 0);
+  --color-border: oklch(0.86 0.02 85);
+  --color-input: oklch(0.88 0.02 85);
+  --color-ring: var(--color-forest);
+
+  /* Fonts */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+@utility container-page {
+  margin-inline: auto;
+  max-width: 72rem; /* ~1152px, adjust to taste */
+  padding-inline: 1.5rem;
+}
+
+/* Optional dark mode */
+.dark {
+  --background: var(--forest-deep);
+  --foreground: var(--cream);
+  --card: oklch(0.28 0.05 155);
+  --card-foreground: var(--cream);
+  --popover: oklch(0.28 0.05 155);
+  --popover-foreground: var(--cream);
+  --primary: var(--cream);
+  --primary-foreground: var(--forest-deep);
+  --secondary: oklch(0.32 0.04 155);
+  --secondary-foreground: var(--cream);
+  --muted: oklch(0.32 0.04 155);
+  --muted-foreground: oklch(0.75 0.02 85);
+  --accent: var(--terracotta);
+  --accent-foreground: var(--cream);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--cream);
+}

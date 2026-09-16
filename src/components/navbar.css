@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap');
+
+.navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.parque-logo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.nav-brand-text {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size: 1.5rem;
+}
+
+.parque-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: var(--color-foreground);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-bg{
+    background-color: var(--color-forest-deep);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+}
+
+.contact-bg a{
+    color: var(--color-cream);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.contact-bg:hover{
+    text-decoration: underline var(--color-cream);
+    scale: 1.05;
+    cursor: pointer;
+}
+
