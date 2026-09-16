@@ -5,10 +5,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100%;  
   background-color: var(--color-background);
-  color: var(--color-foreground);
+  color: var(--color-ink);
   font-family: var(--font-body);
+  position: relative;
+  z-index: 50;
 }
 
 .logo{
@@ -48,7 +50,7 @@
 }
 
 .nav-links a {
-  color: var(--color-foreground);
+  color: var(--color-ink);
   text-decoration: none;
   font-weight: 500;
 }
@@ -71,3 +73,49 @@
     cursor: pointer;
 }
 
+/* Hamburger button styles for mobile view */
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-cream);
+    padding: 1.5rem;
+    gap: 1.25rem;
+    margin-left: 0;
+    text-align: center;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    z-index: 50; /* forces this above the hero/page content below it */
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .contact-bg {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}

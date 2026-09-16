@@ -162,9 +162,9 @@
 }
 
 .container-page img {
-  width: 100%;          /* 1. Set the width you want (can be in px, %, or vw) */
-  height: 600px;         /* 2. Set the height you want */
-  object-fit: cover;     /* 3. This stops the stretching! */
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
 }
 
 .container-page button{
@@ -177,10 +177,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 700px;;
- /* Optional: darken the image for better text contrast */
+  min-height: 700px;
   background-attachment: fixed;
 }
+
 
 .popular-header{
   display: flex;
@@ -283,22 +283,6 @@
   font-size: 0.9rem;
 }
 
-@media (max-width: 1024px) {
-  .product-cards {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-  .product-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .product-cards {
-    min-height: auto; /* let it fully size to content once stacked single-column */
-    padding: 3rem 1.5rem;
-  }
-}
 
 .featured-menu{
   background-color: var(--color-cream);
@@ -463,12 +447,6 @@
   font-weight: 600;
 }
 
-@media (max-width: 900px) {
-  .menu-containers {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 .menu-feature-cta {
   display: flex;
@@ -494,13 +472,13 @@
   gap: 0.5rem;               /* Adds clean spacing between text and icon */
 }
 
-.our-care{
+.our-care {
   padding: 3rem 2.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   gap: 2rem;
-  height: 100dvh;
+  min-height: 100dvh; /* was height — see FAQ section reasoning from earlier */
 }
 
 .care-content{
@@ -553,22 +531,6 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
 }
 
-@media (max-width: 900px) {
-  .our-care {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .care-content {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .care-header {
-    align-items: flex-start;
-    text-align: center;
-  }
-}
 
 footer {
   background-color: var(--color-ink);
@@ -677,4 +639,208 @@ footer {
 
 .navs li a:hover {
   color: var(--color-terracotta);
+}
+
+/* ============================================
+   RESPONSIVE — 1024px (small laptops / tablets landscape)
+   ============================================ */
+@media (max-width: 1024px) {
+  .heading p {
+    font-size: 3.2rem;
+  }
+
+  .product-cards {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+
+  .menu-containers {
+    gap: 1.5rem;
+  }
+
+  .coffee-container,
+  .sandwich-container {
+    width: 320px;
+  }
+
+  .our-care {
+    padding: 2.5rem 2rem;
+  }
+
+  .care-header {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — 768px (tablets)
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-contents {
+    padding: 1.5rem;
+  }
+
+  .heading p {
+    font-size: 2.4rem;
+  }
+
+  .lower-heading {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+  .container-page img {
+    height: 350px;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .bg-image {
+    background-attachment: scroll; /* fixed attachment is unreliable on mobile browsers */
+    min-height: auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .popular-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-cards {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .featured-menu {
+    padding: 2rem 1.25rem;
+  }
+
+  .menu-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coffee-container,
+  .sandwich-container {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .our-care {
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .care-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .care-header {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .care-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+  }
+
+  .parque-pic img {
+    max-width: 100%;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .footer-content {
+    align-items: center;
+  }
+
+  .footer-content p {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .soc-med {
+    justify-content: center;
+  }
+
+  .visit {
+    align-items: center;
+  }
+
+  .navs {
+    align-items: center;
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — 480px (phones)
+   ============================================ */
+@media (max-width: 480px) {
+  .heading p {
+    font-size: 1.9rem;
+  }
+
+  .upper-heading {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .order-button,
+  .menu-button {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .container-page img {
+    height: 240px;
+  }
+
+  .product-card button {
+    font-size: 0.85rem;
+  }
+
+  .coffee-title,
+  .sandwich-title {
+    font-size: 1.2rem;
+  }
+
+  .menu-item-name {
+    font-size: 0.9rem;
+  }
+
+  .size-price,
+  .menu-item-price {
+    font-size: 0.85rem;
+  }
+
+  .care-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content h2 {
+    font-size: 1.5rem;
+  }
 }
