@@ -742,12 +742,10 @@ footer {
 
   .care-content {
     align-items: center;
-    text-align: center;
   }
 
   .care-header {
-    align-items: center;
-    text-align: center;
+    text-align: left;
     width: 100%;
   }
 
